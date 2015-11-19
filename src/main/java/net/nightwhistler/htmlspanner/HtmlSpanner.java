@@ -56,7 +56,7 @@ public class HtmlSpanner {
      * Temporary constant for the width of 1 horizontal em
      * Used for calculating margins.
      */
-    public static final int HORIZONTAL_EM_WIDTH = 10;
+    public static final int HORIZONTAL_EM_WIDTH = 30; // TODO: was 10
 
 
     private Map<String, TagNodeHandler> handlers;
@@ -367,7 +367,7 @@ public class HtmlSpanner {
         registerHandler("strong", boldHandler);
 
         TagNodeHandler marginHandler = new StyledTextHandler(
-                new Style().setMarginLeft(new StyleValue(2.0f, StyleValue.Unit.EM)));
+                new Style().setMarginLeft(new StyleValue(0.0f, StyleValue.Unit.EM))); // TODO: was 2.0f
 
         registerHandler("blockquote", marginHandler);
         registerHandler("ul", marginHandler);
